@@ -20,7 +20,7 @@ $ampluslakeasia = array("0000");
 
 $iplonlakeasia = array("0000");
 
-$microgridlakeafrica = array("5037", "5038", "5039", "5036", "5341", "5342", "5047","kesava","thamil");
+$microgridlakeafrica = array("5037", "5038", "5039", "5036", "5341", "5342", "5047","kesava","thamil","naveen");
 
 $microgridlakeamerica = array("5431", "5432", "5433");
 
