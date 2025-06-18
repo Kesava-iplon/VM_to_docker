@@ -16,5 +16,6 @@ jobs:
         
     - name: Deploy PHP file to GCP VM
       run: |
-        sshpass -p 'iplon321' scp ./getdatavariable.php root@34.100.176.104:/home/kesava/getdatavariable/getdatavariable.php
+        sshpass -p 'iplon321' scp -o StrictHostKeyChecking=no ./getdatavariable.php root@34.100.176.104:/home/kesava/getdatavariable/getdatavariable.php
+
 
