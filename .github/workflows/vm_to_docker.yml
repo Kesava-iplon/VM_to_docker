@@ -13,14 +13,8 @@ jobs:
     - name: Checkout Code from Repository
       uses: actions/checkout@v3
 
-    - name: Set up SSH Key and Known Hosts
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
+        
     - name: Deploy PHP file to GCP VM
       run: |
-        scp -o StrictHostKeyChecking=no ./getdatavariable.php ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+        sshpass -p 'iplon321' scp ./getdatavariable.php root@34.100.176.104:/home/kesava/getdatavariable/getdatavariable.php
 
