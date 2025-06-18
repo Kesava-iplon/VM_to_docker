@@ -23,7 +23,7 @@ jobs:
     - name: Restart Docker container
       run: |
         sshpass -p 'iplon321' ssh -o StrictHostKeyChecking=no root@34.100.176.104 \
-        "docker restart apache"
+        "docker restart apache2"
         
         
 
