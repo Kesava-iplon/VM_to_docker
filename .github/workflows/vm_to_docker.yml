@@ -12,10 +12,19 @@ jobs:
     steps:
     - name: Checkout Code from Repository
       uses: actions/checkout@v3
+      
 
         
     - name: Deploy PHP file to GCP VM
       run: |
         sshpass -p 'iplon321' scp -o StrictHostKeyChecking=no ./getdatavariable.php root@34.100.176.104:/home/kesava/getdatavariable/getdatavariable.php
+
+
+    - name: Restart Docker container
+      run: |
+        sshpass -p 'iplon321' ssh -o StrictHostKeyChecking=no root@34.100.176.104 \
+        "docker restart apache2"
+        
+        
 
 
